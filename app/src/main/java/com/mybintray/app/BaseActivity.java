@@ -15,7 +15,7 @@ public class BaseActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (grantResults.length > 0) {
-            RabbitKnife.initPromissionsResult(this, grantResults[0] == PackageManager.PERMISSION_GRANTED, 111);
+            RabbitKnife.initPromissionsResult(this, grantResults[0] == PackageManager.PERMISSION_GRANTED );
         }
     }
 

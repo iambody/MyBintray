@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ui_2_dip">2dip</dimen>
+    <dimen name="ui_3_dip">2dip</dimen>
+    <dimen name="ui_z_dip">0.5dip</dimen>
+    <dimen name="ui_l_dip">0.8dip</dimen>
+    <dimen name="ui_1_dip">1dip</dimen>
+    <dimen name="ui_4_dip">4dip</dimen>
+    <dimen name="ui_5_dip">5dip</dimen>
+    <dimen name="ui_10_dip">10dip</dimen>
+    <dimen name="ui_11_dip">11dip</dimen>
+    <dimen name="ui_13_dip">13dip</dimen>
+    <dimen name="ui_15_dip">15dip</dimen>
+    <dimen name="ui_16_dip">16dip</dimen>
+    <dimen name="ui_17_dip">17dip</dimen>
+    <dimen name="ui_20_dip">20dip</dimen>
+    <dimen name="ui_28_dip">20dip</dimen>
+    <dimen name="ui_30_dip">30dip</dimen>
+    <dimen name="ui_32_dip">32dip</dimen>
+    <dimen name="ui_40_dip">40dip</dimen>
+    <dimen name="ui_44_dip">44dip</dimen>
+    <dimen name="ui_45_dip">45dip</dimen>
+    <dimen name="ui_50_dip">50dip</dimen>
+    <dimen name="ui_60_dip">60dip</dimen>
+    <dimen name="ui_64_dip">64dip</dimen>
+    <dimen name="ui_6_dip">6dip</dimen>
+    <dimen name="ui_70_dip">70dip</dimen>
+
+    <dimen name="ui_160_dip">160dp</dimen>
+    <dimen name="ui_180_dip">180dp</dimen>
+    <dimen name="dimens_sp_28">28sp</dimen>
+    <dimen name="ui_8_dip">8dp</dimen>
+    <dimen name="ui_80_dip">80dp</dimen>
+    <dimen name="ui_35_dip">35dp</dimen>
+    <dimen name="dimens_sp_17">17sp</dimen>
+    <dimen name="ui_130_dip">130dp</dimen>
+    <dimen name="ui_150_dip">150dp</dimen>
+    <dimen name="dimens_sp_22">22sp</dimen>
+    <dimen name="ui_12_dip">12dp</dimen>
+    <dimen name="ui_14_dip">14dp</dimen>
+</resources>

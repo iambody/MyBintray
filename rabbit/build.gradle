@@ -31,14 +31,16 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 
 //添加
 publish {
-    userOrg = 'HugRabbit'//bintray.com用户名
+    userOrg = 'hugrabbit'//bintray.com用户名
     groupId = 'com.hugerabbit.lib'//jcenter上的路径
     artifactId = 'rabbit'//项目名称
-    publishVersion = '1.0.0'//版本号
-    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    publishVersion = '1.0.1'//版本号
+    desc = ' right '//描述，不重要
     website = 'https://github.com/iambody/MyBintray'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }

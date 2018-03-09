@@ -8,4 +8,7 @@ public class StrUtils {
     public static String getFristCode(String test) {
         return "frist" + test;
     }
+    public static  String getSecondConde(int a){
+        return  a+"";
+    }
 }

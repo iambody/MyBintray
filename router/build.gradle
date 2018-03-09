@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'  //添加
+android {
+    compileSdkVersion 26
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
+    }
+}
+//
+//Properties version = new Properties()
+//version.load(project.file('../VERSION.properties').newDataInputStream())
+//def annoVersion = version.getProperty("ANNOTATION_VERSION")
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    provided "com.android.support:appcompat-v7:${rootProject.ext.supportVersion}"
+//    compile project(':annotation')
+//    compile "com.chenenyu.router:annotation:${annoVersion}"
+}
+//添加
+publish {
+    userOrg = 'hugrabbit'//bintray.com用户名
+    groupId = 'com.hugerabbit.route'//jcenter上的路径
+    artifactId = 'route'//项目名称
+    publishVersion = '1.0.1'//版本号
+    desc = ' right '//描述，不重要
+    website = 'https://github.com/iambody/MyBintray'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
+//apply from: 'publish.gradle'

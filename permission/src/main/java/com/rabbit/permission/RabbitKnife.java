@@ -27,14 +27,16 @@ public class RabbitKnife {
 
                 String[] permissions = rpermission.permission();
                 List<String> permissionss = new ArrayList<>();
-                for (String s : permissions) {
-                    int result = ContextCompat.checkSelfPermission(targetActivity, s);
+//                for (String s : permissions) {
+                    int result = ContextCompat.checkSelfPermission(targetActivity, permissions[0]);
                     if (result != PackageManager.PERMISSION_GRANTED) {//需要
-                        permissionss.add(s);
+                        permissionss.add(permissions[0]);
                     } else {//已经存在
-                        initPromissionsResult(targetActivity,true);
+
+                        initPromissionsResult1(targetActivity,true);
+                        break;
                     }
-                }
+//                }
                 String[] ps = new String[permissionss.size()];
                 permissionss.toArray(ps);
                 if (ps.length > 0)
@@ -62,26 +64,14 @@ public class RabbitKnife {
 
     }
 
-    /**
-     * 这个是权限数组时候需要用到的
-     *
-     * @param targetActivity
-     * @param permissions
-     * @param grantResults
-     */
+
     public static void initPromissionsResult(Activity targetActivity, String[] permissions, int[] grantResults) {
         if (null == targetActivity || !(targetActivity instanceof Activity)) return;
 
 
     }
 
-    /**
-     * 单个权限时候需要用到的
-     *
-     * @param targetActivity
-     * @param permissions
-     * @param
-     */
+
     public static void initPromissionsResult(Activity targetActivity, boolean permissions) {
         if (null == targetActivity || !(targetActivity instanceof Activity)) return;
         Class clazz = targetActivity.getClass();
@@ -91,7 +81,7 @@ public class RabbitKnife {
         for (Method method : methods) {
             if (method.isAnnotationPresent(RpermissionResult.class)) {
                 RpermissionResult rpermissionResult = method.getAnnotation(RpermissionResult.class);
-                if (permissions == rpermissionResult.permissionResult() && 1111 == rpermissionResult.requestCode()) {
+                if (permissions == rpermissionResult.permissionResult()) {
 
                     try {
                         method.setAccessible(true);
@@ -106,5 +96,30 @@ public class RabbitKnife {
             }
         }
 
-    }
+
 }
+    public static void initPromissionsResult1(Activity targetActivity, boolean permissions) {
+        if (null == targetActivity || !(targetActivity instanceof Activity)) return;
+        Class clazz = targetActivity.getClass();
+
+        Method[] methods = clazz.getMethods();
+        if (null == methods || 0 == methods.length) return;
+        for (Method method : methods) {
+            if (method.isAnnotationPresent(RpermissionResult.class)) {
+                RpermissionResult rpermissionResult = method.getAnnotation(RpermissionResult.class);
+                if (permissions == rpermissionResult.permissionResult()) {
+
+                    try {
+                        method.setAccessible(true);
+                        method.invoke(targetActivity);
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    } catch (InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                }
+            }
+        }
+    }
+    }

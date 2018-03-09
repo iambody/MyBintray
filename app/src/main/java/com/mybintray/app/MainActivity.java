@@ -28,7 +28,7 @@ public class MainActivity extends BaseActivity {
         RabbitKnife.initPromissions(this);
     }
 
-    @RpermissionResult(permissionResult = true, requestCode = 111)
+    @RpermissionResult(permissionResult = true)
     public void toDoThing(){
         Toast.makeText(MainActivity.this,"执行aaa",Toast.LENGTH_LONG).show();
     }

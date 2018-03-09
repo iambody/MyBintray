@@ -1,1 +1,1 @@
-include ':app', ':rabbit'
+include ':app', ':permission', ':router'

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white_light">#bbffffff</color>
+    <!-- 主金色-->
+    <color name="app_golden">#CEA16E</color>
+    <color name="app_bt_gary">#dadada</color>
+    <color name="app_divider_gary">#C9C9CD</color>
+    <color name="black40">#66000000</color>
+</resources>
